@@ -1,16 +1,19 @@
-import path from 'path';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import typescript from '@rollup/plugin-typescript';
-import autoImport from 'unplugin-auto-import/vite';
+import path from 'path'
 
-import { peerDependencies } from './package.json';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import typescript from '@rollup/plugin-typescript'
+import autoImport from 'unplugin-auto-import/vite'
 
-const externalPackages = [...Object.keys(peerDependencies || {})];
+import { peerDependencies } from './package.json'
+
+const externalPackages = [...Object.keys(peerDependencies || {})]
 
 // Creating regexps of the packages to make sure subpaths of the
 // packages are also treated as external
-const regexpsOfPackages = externalPackages.map((packageName) => new RegExp(`^${packageName}(/.*)?`));
+const regexpsOfPackages = externalPackages.map(
+  (packageName) => new RegExp(`^${packageName}(/.*)?`),
+)
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -34,4 +37,4 @@ export default defineConfig({
     },
     target: 'esnext',
   },
-});
+})
