@@ -1,11 +1,12 @@
 import path from 'path'
 
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import typescript from '@rollup/plugin-typescript'
-import autoImport from 'unplugin-auto-import/vite'
+import { mergeConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 import { peerDependencies } from './package.json'
+import baseConfig from './vite.base.config'
+
+import type { UserConfig } from 'vite'
 
 const externalPackages = [...Object.keys(peerDependencies || {})]
 
@@ -16,8 +17,8 @@ const regexpsOfPackages = externalPackages.map(
 )
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), typescript(), autoImport({ imports: ['react'] })],
+export default mergeConfig(baseConfig, {
+  plugins: [dts()],
   build: {
     minify: false,
     lib: {
@@ -37,4 +38,4 @@ export default defineConfig({
     },
     target: 'esnext',
   },
-})
+} as UserConfig)
