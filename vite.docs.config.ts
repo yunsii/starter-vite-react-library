@@ -1,19 +1,15 @@
 import path from 'path'
 
 import { mergeConfig } from 'vite'
-import _mdx from 'vite-plugin-mdx'
 import pages, { DefaultPageStrategy } from 'vite-plugin-react-pages'
 
 import baseConfig from './vite.base.config'
 
 import type { UserConfig } from 'vite'
 
-const mdx = (_mdx as any).default as typeof _mdx
-
 // https://vitejs.dev/config/
 export default mergeConfig(baseConfig, {
   plugins: [
-    mdx(),
     pages({
       pagesDir: path.join(__dirname, 'docs/pages'),
       pageStrategy: new DefaultPageStrategy({
