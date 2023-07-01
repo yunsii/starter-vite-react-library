@@ -57,7 +57,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "@vitejs/plugin-react": "^4.0.1",
     "@vitest/ui": "^0.32.2",
-    "eslint": "^8.21.0",
+    "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.6.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.2.3",
