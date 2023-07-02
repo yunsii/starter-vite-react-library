@@ -24,8 +24,8 @@ devDependencies:
     specifier: ^17.4.4
     version: 17.4.4
   '@jannajs/lint':
-    specifier: ^2.3.1
-    version: 2.3.1(@antfu/eslint-config-react@0.35.3)(@antfu/eslint-config@0.35.3)(@commitlint/cli@17.6.6)(@commitlint/config-conventional@17.6.6)(@commitlint/types@17.4.4)(eslint-config-prettier@8.8.0)(eslint@8.28.0)(lint-staged@13.2.3)(prettier@2.7.1)
+    specifier: ^2.3.2
+    version: 2.3.2(@antfu/eslint-config-react@0.35.3)(@antfu/eslint-config@0.35.3)(@commitlint/cli@17.6.6)(@commitlint/config-conventional@17.6.6)(@commitlint/types@17.4.4)(eslint-config-prettier@8.8.0)(eslint@8.28.0)(lint-staged@13.2.3)(prettier@2.7.1)
   '@mdx-js/react':
     specifier: ^2.3.0
     version: 2.3.0(react@18.2.0)
@@ -1399,10 +1399,10 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
-  /@jannajs/lint@2.3.1(@antfu/eslint-config-react@0.35.3)(@antfu/eslint-config@0.35.3)(@commitlint/cli@17.6.6)(@commitlint/config-conventional@17.6.6)(@commitlint/types@17.4.4)(eslint-config-prettier@8.8.0)(eslint@8.28.0)(lint-staged@13.2.3)(prettier@2.7.1):
+  /@jannajs/lint@2.3.2(@antfu/eslint-config-react@0.35.3)(@antfu/eslint-config@0.35.3)(@commitlint/cli@17.6.6)(@commitlint/config-conventional@17.6.6)(@commitlint/types@17.4.4)(eslint-config-prettier@8.8.0)(eslint@8.28.0)(lint-staged@13.2.3)(prettier@2.7.1):
     resolution:
       {
-        integrity: sha512-Jt8Mx5iRkB4VP/cLn36TIr+Ju6CwlZtZvTkI4QtBAld6asyuJeXWxwQjN00J+NVxcLf4wdbA03rZlPZ7vBTtzQ==,
+        integrity: sha512-PJ9mJX6rB7R8wOpTFwI3pf0N+iD9y4V9yjkAys1D/MuPU5B7RN40+YAnVU3J43D+GKxqpzbTU0rV3J3YHKs0WA==,
       }
     hasBin: true
     peerDependencies:

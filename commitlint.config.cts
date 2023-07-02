@@ -87,7 +87,7 @@ const config: UserConfig = {
           revert: {
             description: 'Reverts a previous commit',
             title: 'Reverts',
-            emoji: '🗑',
+            emoji: '⏪️',
           },
           release: {
             description: 'Release a package version',
