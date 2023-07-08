@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
 
-# Build & Publish
+## Build & Publish
 
 - `npm run build`
 - `npx changeset`
