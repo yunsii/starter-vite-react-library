@@ -1,11 +1,37 @@
 import path from 'path'
 
 import { mergeConfig } from 'vite'
-import pages, { DefaultPageStrategy } from 'vite-plugin-react-pages'
+import pages, {
+  DefaultPageStrategy,
+  extractStaticData,
+} from 'vite-plugin-react-pages'
+import { kebabCase } from 'lodash-es'
 
 import baseConfig from './vite.base.config'
 
 import type { UserConfig } from 'vite'
+
+function getPagePublicPath(relativePageFilePath: string) {
+  let pagePublicPath = relativePageFilePath.replace(
+    /\$\.(md|mdx|js|jsx|ts|tsx)$/,
+    '',
+  )
+  pagePublicPath = pagePublicPath.replace(/index$/, '')
+  // remove trailing slash
+  pagePublicPath = pagePublicPath.replace(/\/$/, '')
+  // ensure starting slash
+  pagePublicPath = pagePublicPath.replace(/^\//, '')
+  pagePublicPath = `/${kebabCase(pagePublicPath)}`
+
+  // turn [id] into :id
+  // so that react-router can recognize it as url params
+  pagePublicPath = pagePublicPath.replace(
+    /\[(.*?)\]/g,
+    (_, paramName) => `:${paramName}`,
+  )
+
+  return pagePublicPath
+}
 
 // https://vitejs.dev/config/
 export default mergeConfig(baseConfig, {
@@ -49,6 +75,14 @@ export default mergeConfig(baseConfig, {
             // set page staticData
             const staticData = api.getStaticData(pageId)
             staticData.main = await helpers.extractStaticData(file)
+          })
+        },
+        fileHandler: async (file, fileHandlerAPI) => {
+          const pagePublicPath = getPagePublicPath(file.relative)
+          fileHandlerAPI.addPageData({
+            pageId: pagePublicPath,
+            dataPath: file.path,
+            staticData: await extractStaticData(file),
           })
         },
       }),
