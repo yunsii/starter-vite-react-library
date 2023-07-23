@@ -21,7 +21,7 @@ function getPagePublicPath(relativePageFilePath: string) {
   pagePublicPath = pagePublicPath.replace(/\/$/, '')
   // ensure starting slash
   pagePublicPath = pagePublicPath.replace(/^\//, '')
-  pagePublicPath = `/${kebabCase(pagePublicPath)}`
+  pagePublicPath = `/${pagePublicPath}`
 
   // turn [id] into :id
   // so that react-router can recognize it as url params
@@ -51,7 +51,8 @@ export default mergeConfig(baseConfig, {
               if (!match) {
                 throw new Error(`unexpected file: ${absolute}`)
               }
-              const [, componentName, demoName] = match
+              let [, componentName, demoName] = match
+              componentName = transformComponentName(componentName)
               const pageId = `/${componentName}`
               // set page data
               const runtimeDataPaths = api.getRuntimeData(pageId)
@@ -67,7 +68,8 @@ export default mergeConfig(baseConfig, {
             if (!match) {
               throw new Error(`unexpected file: ${absolute}`)
             }
-            const [, componentName] = match
+            let [, componentName] = match
+            componentName = transformComponentName(componentName)
             const pageId = `/${componentName}`
             // set page data
             const runtimeDataPaths = api.getRuntimeData(pageId)
@@ -92,3 +94,17 @@ export default mergeConfig(baseConfig, {
     outDir: 'dist-docs',
   },
 } as UserConfig)
+
+/**
+ * trun "components/ButtonGroup" to `components/button-group`
+ * but don't process hooks/useConsole
+ */
+function transformComponentName(componentPath: string) {
+  if (!componentPath.startsWith('components/')) {
+    return componentPath
+  }
+  const splits = componentPath.split('/')
+  const lastIndex = splits.length - 1
+  splits[lastIndex] = kebabCase(splits[lastIndex])
+  return splits.join('/')
+}
