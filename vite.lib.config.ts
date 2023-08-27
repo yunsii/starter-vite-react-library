@@ -1,14 +1,19 @@
-import path from 'path'
+import path from 'node:path'
 
+import fse from 'fs-extra'
 import { mergeConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
-import { peerDependencies } from './package.json'
 import baseConfig from './vite.base.config'
 
 import type { UserConfig } from 'vite'
 
-const externalPackages = [...Object.keys(peerDependencies || {})]
+const { peerDependencies = {}, dependencies = {} } =
+  fse.readJsonSync('./package.json')
+
+const externalPackages = Array.from(
+  new Set([...Object.keys(peerDependencies), ...Object.keys(dependencies)]),
+)
 
 // Creating regexps of the packages to make sure subpaths of the
 // packages are also treated as external
@@ -34,7 +39,7 @@ export default mergeConfig(baseConfig, {
         preserveModulesRoot: 'src',
         entryFileNames: '[name].mjs',
       },
-      external: regexpsOfPackages,
+      external: [...regexpsOfPackages, /^node:.*$/],
     },
     target: 'esnext',
   },
