@@ -29,9 +29,6 @@ devDependencies:
   '@mdx-js/react':
     specifier: ^2.3.0
     version: 2.3.0(react@18.2.0)
-  '@rollup/plugin-typescript':
-    specifier: ^8.3.4
-    version: 8.3.4(rollup@2.77.2)(tslib@2.4.0)(typescript@5.1.6)
   '@types/fs-extra':
     specifier: ^11.0.1
     version: 11.0.1
@@ -112,7 +109,7 @@ devDependencies:
     version: 5.1.6
   unplugin-auto-import:
     specifier: ^0.16.4
-    version: 0.16.4(rollup@2.77.2)
+    version: 0.16.4(rollup@3.26.0)
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@18.6.2)
@@ -124,7 +121,7 @@ devDependencies:
     version: 3.2.0(@types/node@18.6.2)(typescript@5.1.6)
   vite-plugin-react-pages:
     specifier: ^4.1.3
-    version: 4.1.3(@babel/core@7.22.5)(react@18.2.0)(rollup@2.77.2)(vite@4.3.9)
+    version: 4.1.3(@babel/core@7.22.5)(react@18.2.0)(rollup@3.26.0)(vite@4.3.9)
   vite-tsconfig-paths:
     specifier: ^3.5.0
     version: 3.5.0(vite@4.3.9)
@@ -1279,14 +1276,14 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@mdx-js/rollup@2.3.0(rollup@2.77.2):
+  /@mdx-js/rollup@2.3.0(rollup@3.26.0):
     resolution: {integrity: sha512-wLvRfJS/M4UmdqTd+WoaySEE7q4BIejYf1xAHXYvtT1du/1Tl/z2450Gg2+Hu7fh05KwRRiehiTP9Yc/Dtn0fA==}
     peerDependencies:
       rollup: '>=2'
     dependencies:
       '@mdx-js/mdx': 2.3.0
-      '@rollup/pluginutils': 5.0.2(rollup@2.77.2)
-      rollup: 2.77.2
+      '@rollup/pluginutils': 5.0.2(rollup@3.26.0)
+      rollup: 3.26.0
       source-map: 0.7.4
       vfile: 5.3.7
     transitivePeerDependencies:
@@ -1375,51 +1372,6 @@ packages:
   /@remix-run/router@1.7.0:
     resolution: {integrity: sha512-Eu1V3kz3mV0wUpVTiFHuaT8UD1gj/0VnoFHQYX35xlslQUpe8CuYoKFn9d4WZFHm3yDywz6ALZuGdnUPKrNeAw==}
     engines: {node: '>=14'}
-    dev: true
-
-  /@rollup/plugin-typescript@8.3.4(rollup@2.77.2)(tslib@2.4.0)(typescript@5.1.6):
-    resolution: {integrity: sha512-wt7JnYE9antX6BOXtsxGoeVSu4dZfw0dU3xykfOQ4hC3EddxRbVG/K0xiY1Wup7QOHJcjLYXWAn0Kx9Z1SBHHg==}
-    engines: {node: '>=8.0.0'}
-    peerDependencies:
-      rollup: ^2.14.0
-      tslib: '*'
-      typescript: '>=3.7.0'
-    peerDependenciesMeta:
-      tslib:
-        optional: true
-    dependencies:
-      '@rollup/pluginutils': 3.1.0(rollup@2.77.2)
-      resolve: 1.22.1
-      rollup: 2.77.2
-      tslib: 2.4.0
-      typescript: 5.1.6
-    dev: true
-
-  /@rollup/pluginutils@3.1.0(rollup@2.77.2):
-    resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
-    engines: {node: '>= 8.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0
-    dependencies:
-      '@types/estree': 0.0.39
-      estree-walker: 1.0.1
-      picomatch: 2.3.1
-      rollup: 2.77.2
-    dev: true
-
-  /@rollup/pluginutils@5.0.2(rollup@2.77.2):
-    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.1
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-      rollup: 2.77.2
     dev: true
 
   /@rollup/pluginutils@5.0.2(rollup@3.26.0):
@@ -1526,10 +1478,6 @@ packages:
     resolution: {integrity: sha512-3qvGd0z8F2ENTGr/GG1yViqfiKmRfrXVx5sJyHGFu3z7m5g5utCQtGp/g29JnjflhtQJBv1WDQukHiT58xPcYQ==}
     dependencies:
       '@types/estree': 1.0.1
-    dev: true
-
-  /@types/estree@0.0.39:
-    resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
     dev: true
 
   /@types/estree@1.0.1:
@@ -3712,10 +3660,6 @@ packages:
     dependencies:
       '@types/estree-jsx': 1.0.0
       '@types/unist': 2.0.6
-    dev: true
-
-  /estree-walker@1.0.1:
-    resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
     dev: true
 
   /estree-walker@2.0.2:
@@ -7031,14 +6975,6 @@ packages:
       glob: 10.3.3
     dev: true
 
-  /rollup@2.77.2:
-    resolution: {integrity: sha512-m/4YzYgLcpMQbxX3NmAqDvwLATZzxt8bIegO78FZLl+lAgKJBd1DRAOeEiZcKOIOPjxE6ewHWHNgGEalFXuz1g==}
-    engines: {node: '>=10.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /rollup@3.26.0:
     resolution: {integrity: sha512-YzJH0eunH2hr3knvF3i6IkLO/jTjAEwU4HoMUbQl4//Tnl3ou0e7P5SjxdDr8HQJdeUJShlbEHXrrnEHy1l7Yg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
@@ -7904,10 +7840,10 @@ packages:
       vfile: 5.3.7
     dev: true
 
-  /unimport@3.0.11(rollup@2.77.2):
+  /unimport@3.0.11(rollup@3.26.0):
     resolution: {integrity: sha512-UaaLu7TiqiEwjm5a9FGsL8RL87U65wyr1jBeIAAvLChgJZRMTTkknU9bkWjBsVGutXLT2Yq8/dPyWXSC3/ELRg==}
     dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@2.77.2)
+      '@rollup/pluginutils': 5.0.2(rollup@3.26.0)
       escape-string-regexp: 5.0.0
       fast-glob: 3.3.0
       local-pkg: 0.4.3
@@ -7988,7 +7924,7 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin-auto-import@0.16.4(rollup@2.77.2):
+  /unplugin-auto-import@0.16.4(rollup@3.26.0):
     resolution: {integrity: sha512-xdgBa9NAS3JG8HjkAZHSbGSMlrjKpaWKXGUzaF6RzEtr980RCl1t0Zsu0skUInNYrEQfqaHc7aGWPv41DLTK/w==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -8001,11 +7937,11 @@ packages:
         optional: true
     dependencies:
       '@antfu/utils': 0.7.4
-      '@rollup/pluginutils': 5.0.2(rollup@2.77.2)
+      '@rollup/pluginutils': 5.0.2(rollup@3.26.0)
       local-pkg: 0.4.3
       magic-string: 0.30.0
       minimatch: 9.0.2
-      unimport: 3.0.11(rollup@2.77.2)
+      unimport: 3.0.11(rollup@3.26.0)
       unplugin: 1.3.1
     transitivePeerDependencies:
       - rollup
@@ -8174,13 +8110,13 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-react-pages@4.1.3(@babel/core@7.22.5)(react@18.2.0)(rollup@2.77.2)(vite@4.3.9):
+  /vite-plugin-react-pages@4.1.3(@babel/core@7.22.5)(react@18.2.0)(rollup@3.26.0)(vite@4.3.9):
     resolution: {integrity: sha512-GmGDvD3zcu/xpMuiGUPC3IEUMgPm/ECeEKrDkO1bzilwePpcI5YA/BI0P8EmvS23mArk4el3XjvAcsZ7J458jw==}
     hasBin: true
     peerDependencies:
       vite: ^4.2.1
     dependencies:
-      '@mdx-js/rollup': 2.3.0(rollup@2.77.2)
+      '@mdx-js/rollup': 2.3.0(rollup@3.26.0)
       chalk: 4.1.2
       chokidar: 3.5.3
       dequal: 2.0.3
