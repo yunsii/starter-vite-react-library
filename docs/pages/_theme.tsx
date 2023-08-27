@@ -1,3 +1,5 @@
+import './global.css'
+
 import React from 'react'
 import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
 
