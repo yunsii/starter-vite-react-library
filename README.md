@@ -7,6 +7,7 @@
 - Search and replace all `pkg-name` to `what-you-want-package-name`
 - Update [\_theme.tsx](./docs/pages/_theme.tsx) package href, remove useless navs
 - Update or remove test cases
+- Add description to [package.json](./package.json)
 - Add some keywords to [package.json](./package.json)
 - Update the author information, like name, link, etc.
 
