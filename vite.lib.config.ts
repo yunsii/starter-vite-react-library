@@ -23,7 +23,7 @@ export default mergeConfig(baseConfig, {
         dir: 'dist',
         preserveModules: true,
         preserveModulesRoot: 'src',
-        entryFileNames: '[name].mjs',
+        entryFileNames: '[name].js',
       },
       external: [/node_modules/, /^node:.*$/],
     },
