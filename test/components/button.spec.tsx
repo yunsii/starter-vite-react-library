@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { expect, test } from 'vitest'
+import { expect, it } from 'vitest'
 
 import { Button } from '../../src'
 
@@ -11,7 +11,7 @@ function toJson(component: renderer.ReactTestRenderer) {
   return result as renderer.ReactTestRendererJSON
 }
 
-test('Link changes the class when hovered', () => {
+it('link changes the class when hovered', () => {
   const component = renderer.create(<Button>Anthony Fu</Button>)
   const tree = toJson(component)
   expect(tree).toMatchSnapshot()

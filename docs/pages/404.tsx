@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Component404 = () => {
+function Component404() {
   const navigate = useNavigate()
 
   return (
@@ -12,8 +12,7 @@ const Component404 = () => {
         onClick={() =>
           navigate('/', {
             replace: true,
-          })
-        }
+          })}
       >
         Home
       </button>
