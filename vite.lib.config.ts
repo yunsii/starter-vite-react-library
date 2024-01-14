@@ -9,7 +9,9 @@ import baseConfig from './vite.base.config'
 
 // https://vitejs.dev/config/
 export default mergeConfig(baseConfig, {
-  plugins: [dts()],
+  plugins: [dts({
+    exclude: '**/demos',
+  })],
   build: {
     minify: false,
     lib: {
@@ -25,7 +27,8 @@ export default mergeConfig(baseConfig, {
         preserveModulesRoot: 'src',
         entryFileNames: '[name].js',
       },
-      external: [/node_modules/, /^node:.*$/],
+      // ref: https://github.com/vitejs/vite/issues/4454#issuecomment-1407461535
+      external: (source, _, isResolved) => !(isResolved || /^[./(@/)]/.test(source)),
     },
     target: 'esnext',
   },
