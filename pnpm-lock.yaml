@@ -21,8 +21,8 @@ devDependencies:
     specifier: ^18.4.4
     version: 18.4.4
   '@jannajs/lint':
-    specifier: 3.0.0-next.0
-    version: 3.0.0-next.0(@antfu/eslint-config@2.6.2)(@commitlint/cli@18.4.4)(@commitlint/config-conventional@18.4.4)(@commitlint/types@18.4.4)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-react@7.33.2)(eslint-ts-patch@8.56.0-0)(eslint-ts-patch@8.56.0-0)(lint-staged@15.2.0)
+    specifier: 3.0.0-next.3
+    version: 3.0.0-next.3(@antfu/eslint-config@2.6.2)(@commitlint/cli@18.4.4)(@commitlint/config-conventional@18.4.4)(@commitlint/types@18.4.4)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-react@7.33.2)(eslint-ts-patch@8.56.0-0)(eslint-ts-patch@8.56.0-0)(husky@8.0.3)(lint-staged@15.2.0)
   '@mdx-js/react':
     specifier: ^3.0.0
     version: 3.0.0(@types/react@18.2.47)(react@18.2.0)
@@ -1188,21 +1188,22 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /@jannajs/lint@3.0.0-next.0(@antfu/eslint-config@2.6.2)(@commitlint/cli@18.4.4)(@commitlint/config-conventional@18.4.4)(@commitlint/types@18.4.4)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-react@7.33.2)(eslint-ts-patch@8.56.0-0)(eslint-ts-patch@8.56.0-0)(lint-staged@15.2.0):
-    resolution: {integrity: sha512-+NKspRvj7bAC9kYuJ4iPVE8MA5eCVafGq6wRmVVnKIqAkOTQSZoFqQmIzlMeexjGT5X0ZgKGZ9iZBWBLYEgtjw==}
+  /@jannajs/lint@3.0.0-next.3(@antfu/eslint-config@2.6.2)(@commitlint/cli@18.4.4)(@commitlint/config-conventional@18.4.4)(@commitlint/types@18.4.4)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-react@7.33.2)(eslint-ts-patch@8.56.0-0)(eslint-ts-patch@8.56.0-0)(husky@8.0.3)(lint-staged@15.2.0):
+    resolution: {integrity: sha512-u5EOQW0jZNAiayMiJD+skZJdzwDedC1qLRjeEZVt9ly1kQzZtQG37IYRub49KncdnLdIkWbVQzB5B35kgqItGw==}
     hasBin: true
     peerDependencies:
       '@antfu/eslint-config': ^2.6.2
       '@commitlint/cli': ^18.4.4
       '@commitlint/config-conventional': ^18.4.4
       '@commitlint/types': ^18.4.4
-      eslint: npm:eslint-ts-patch@^8.56.0-0
+      eslint: ^8.56.0
       eslint-plugin-format: ^0.1.0
       eslint-plugin-react: ^7.33.2
       eslint-plugin-react-hooks: ^4.6.0
-      eslint-plugin-react-refresh: ^0.4.4
+      eslint-plugin-react-refresh: ^0.4.5
       eslint-ts-patch: ^8.56.0-0
-      lint-staged: ^13.1.2
+      husky: ^8.0.3
+      lint-staged: ^15.2.0
     dependencies:
       '@antfu/eslint-config': 2.6.2(@vue/compiler-sfc@3.4.12)(eslint-plugin-format@0.1.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-react@7.33.2)(eslint-ts-patch@8.56.0-0)(typescript@5.3.3)(vitest@1.2.0)
       '@antfu/ni': 0.21.12
@@ -1210,14 +1211,15 @@ packages:
       '@commitlint/config-conventional': 18.4.4
       '@commitlint/is-ignored': 18.4.4
       '@commitlint/types': 18.4.4
-      commander: 9.4.0
-      consola: 2.15.3
+      commander: 11.1.0
+      consola: 3.2.3
       eslint: /eslint-ts-patch@8.56.0-0
       eslint-plugin-format: 0.1.0(eslint-ts-patch@8.56.0-0)
       eslint-plugin-react: 7.33.2(eslint-ts-patch@8.56.0-0)
       eslint-plugin-react-hooks: 4.6.0(eslint-ts-patch@8.56.0-0)
       eslint-plugin-react-refresh: 0.4.5(eslint-ts-patch@8.56.0-0)
       eslint-ts-patch: 8.56.0-0
+      glob: 10.3.10
       husky: 8.0.3
       lint-staged: 15.2.0
       mrm-core: 7.1.22
@@ -2882,11 +2884,6 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /commander@9.4.0:
-    resolution: {integrity: sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==}
-    engines: {node: ^12.20.0 || >=14}
-    dev: true
-
   /comment-json@2.4.2:
     resolution: {integrity: sha512-T+iXox779qsqneMYx/x5BZyz4xjCeQRmuNVzz8tko7qZUs3MlzpA3RAs+O1XsgcKToNBMIvfVzafGOeiU7RggA==}
     engines: {node: '>= 6'}
@@ -2939,8 +2936,9 @@ packages:
     resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
 
-  /consola@2.15.3:
-    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
+  /consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
     dev: true
 
   /content-disposition@0.5.2:
@@ -4487,7 +4485,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.3.0
+      fast-glob: 3.3.2
       ignore: 5.3.0
       merge2: 1.4.1
       slash: 4.0.0
@@ -6355,7 +6353,7 @@ packages:
       strip-bom: 4.0.0
       validate-npm-package-name: 3.0.0
       webpack-merge: 4.2.2
-      yaml: 2.3.1
+      yaml: 2.3.4
     dev: true
 
   /mrmime@2.0.0:
@@ -9105,5 +9103,5 @@ packages:
       ps-tree: 1.2.0
       webpod: 0.0.2
       which: 3.0.1
-      yaml: 2.3.1
+      yaml: 2.3.4
     dev: true
