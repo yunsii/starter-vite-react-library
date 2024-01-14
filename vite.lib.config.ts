@@ -28,7 +28,7 @@ export default mergeConfig(baseConfig, {
         entryFileNames: '[name].js',
       },
       // ref: https://github.com/vitejs/vite/issues/4454#issuecomment-1407461535
-      external: (source, _, isResolved) => !(isResolved || /^[./(@/)]/.test(source)),
+      external: (source, _, isResolved) => !(isResolved || /(^[./])|(^@\/)/.test(source)),
     },
     target: 'esnext',
   },
