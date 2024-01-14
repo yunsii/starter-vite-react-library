@@ -9,7 +9,7 @@
 - Update or remove test cases
 - Add description to [package.json](./package.json)
 - Add some keywords to [package.json](./package.json)
-- Update the author information, like name, link, etc.
+- Update the author information, like name, link, FUNDING etc.
 
 Finally, you can remove the [usage section](#usage) completely.
 
