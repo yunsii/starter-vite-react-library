@@ -9,6 +9,7 @@ function Component404() {
       <h1>404</h1>
       <p>Page not found</p>
       <button
+        type='button'
         onClick={() =>
           navigate('/', {
             replace: true,
